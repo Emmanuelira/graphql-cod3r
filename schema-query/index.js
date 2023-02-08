@@ -20,6 +20,11 @@ const typeDefs = gql`
     }
 `;
 const resolvers = {
+    Usuario: {
+        salario(usuario) {
+            return usuario.salario_real;
+        }
+    },
     Query: {
         ola() {
             return 'string qualquer';
@@ -36,7 +41,7 @@ const resolvers = {
                 nome: "João da Silva",
                 email: "joao@gmail.com",
                 idade: 52,
-                salario: 7414.41,
+                salario_real: 7414.41,
                 vip: true
             }
         }
