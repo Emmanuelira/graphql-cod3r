@@ -71,8 +71,8 @@ const resolvers = {
         usuarios() {
             return usuarios;
         },
-        usuario(_, args) {
-            const array = usuarios.filter(u => u.id == args.id);
+        usuario(_, { id }) {
+            const array = usuarios.filter(u => u.id == id);
             return array ? array[0] : null;
         }
     },
