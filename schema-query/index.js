@@ -18,6 +18,7 @@ const typeDefs = gql`
         produtoEmDestaque: Produto
         numerosMegaSena: [Int!]!
         usuarios: [Usuario]
+        usuario(id: ID): Usuario
     }
 
     type Usuario {
@@ -69,6 +70,10 @@ const resolvers = {
         },
         usuarios() {
             return usuarios;
+        },
+        usuario(_, args) {
+            const array = usuarios.filter(u => u.id == args.id);
+            return array ? array[0] : null;
         }
     },
     Usuario: {
