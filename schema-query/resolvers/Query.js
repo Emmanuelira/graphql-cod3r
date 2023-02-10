@@ -34,8 +34,7 @@ module.exports = {
         return usuarios;
     },
     usuario(_, { id }) {
-        const array = usuarios.filter(u => u.id == id);
-        return array ? array[0] : null;
+        return usuarios.filter(u => u.id == id)[0];
     },
     perfis() {
         return perfis;
