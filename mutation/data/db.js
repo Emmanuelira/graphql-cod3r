@@ -11,20 +11,20 @@ const usuarios = [
         perfil_id: 1,
         status: "ATIVO"
     },
-    { 
-        id: proximoId(), 
-        nome: "Lucas Veloso", 
-        email: "lucas@gmail.com", 
-        perfil_id: 2,
-        status: "INATIVO"
-    },
-    { 
-        id: proximoId(), 
-        nome: "Carlos Batista", 
-        email: "carlos@gmail.com",
-        perfil_id: 1,
-        status: "BLOQUEADO" 
-    }
+    // { 
+    //     id: proximoId(), 
+    //     nome: "Lucas Veloso", 
+    //     email: "lucas@gmail.com", 
+    //     perfil_id: 2,
+    //     status: "INATIVO"
+    // },
+    // { 
+    //     id: proximoId(), 
+    //     nome: "Carlos Batista", 
+    //     email: "carlos@gmail.com",
+    //     perfil_id: 1,
+    //     status: "BLOQUEADO" 
+    // }
 ];
 
 const perfis = [

@@ -14,5 +14,13 @@ module.exports = {
             usuarios.push(usuario);
             return usuario;
         }
+    },
+    excluirUsuario(_, { id }) {
+        const index = usuarios.findIndex(u => u.id == id);
+        if(index < 0) {
+            throw new Error('Usuário não encontrado.');
+        } else {
+            return usuarios.splice(index, 1)[0]; 
+        }
     }
 }
