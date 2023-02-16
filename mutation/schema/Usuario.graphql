@@ -19,3 +19,9 @@ type Perfil {
     id: ID
     nome: String
 }
+
+input UsuarioInput {
+    nome: String
+    email: String
+    idade: Int
+}
