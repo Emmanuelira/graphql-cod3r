@@ -1,9 +1,3 @@
-enum UsuarioStatus {
-    ATIVO
-    INATIVO
-    BLOQUEADO
-}
-
 type Usuario {
     id: ID
     nome: String!
@@ -15,9 +9,10 @@ type Usuario {
     status: UsuarioStatus
 }
 
-type Perfil {
-    id: ID
-    nome: String
+enum UsuarioStatus {
+    ATIVO
+    INATIVO
+    BLOQUEADO
 }
 
 input UsuarioInput {

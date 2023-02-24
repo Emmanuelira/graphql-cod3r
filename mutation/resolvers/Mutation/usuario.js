@@ -1,4 +1,4 @@
-const { usuarios, proximoId } = require('../../data/db');
+const { usuarios, proximoIdUsuario } = require('../../data/db');
 
 function indiceUsuario(filtro) {
     const { id, email } = filtro;
@@ -17,7 +17,7 @@ module.exports = {
             throw new Error('E-mail já cadastrado.');
         } else {
             const usuario = {
-                id: proximoId(),
+                id: proximoIdUsuario(),
                 ...dados,
                 perfil_id: 1,
                 status: "ATIVO"
