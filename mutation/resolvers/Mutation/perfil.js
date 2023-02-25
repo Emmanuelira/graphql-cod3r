@@ -34,6 +34,9 @@ module.exports = {
         if(index < 0) {
             throw new Error("Perfil não encontrado.");
         } else {
+            if(perfis.some(perfil => perfil.nome === dados.nome)) {
+                throw new Error("Nome de perfil já existente.");
+            }
             const perfil = { ...perfis[index], ...dados };
             perfis.splice(index, 1, perfil);
             return perfil;
