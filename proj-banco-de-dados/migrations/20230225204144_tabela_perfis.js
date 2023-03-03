@@ -4,7 +4,7 @@
  */
 exports.up = function(knex) {
   return knex.schema.createTable('perfis', table => {
-    table.increments('id').primary
+    table.increments('id').primary()
     table.string('nome').notNull().unique()
     table.string('rotulo').notNull()
   }).then(function () {
