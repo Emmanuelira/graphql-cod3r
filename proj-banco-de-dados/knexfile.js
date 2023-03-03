@@ -4,11 +4,13 @@
  * @type { Object.<string, import("knex").Knex.Config> }
  */
 
-const connection = require('./.env');
-
 module.exports = {
   client: 'mysql',
-  connection,
+  connection: {
+    database: 'proj-bd',
+    user: 'root',
+    password: 'passw@1234'
+  },
   pool: {
     min: 2,
     max: 10
