@@ -5,6 +5,10 @@ module.exports = {
         return await db('usuarios');
     },
     async usuario(_, { filtro }) {
-        // implementar
+        if(filtro.id) 
+            return await db('usuarios').where({ id: filtro.id }).first();
+        else if(filtro.email) 
+            return await db('usuarios').where({ email: filtro.email }).first();
+        return null;
     },
 }
